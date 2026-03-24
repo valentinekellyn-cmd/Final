@@ -1,204 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ambassador Program | Final Step</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+/* CSS styles for slideshow */
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
-(function(){
-emailjs.init("4PLtddLx6m8H2zSFS");
-})();
-</script>
-
-<style>
-:root {
---gold: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
---pink: #FF1493;
---black-overlay: rgba(0, 0, 0, 0.92);
-}
-
-body {
-background-color: #000;
-color: #ffffff;
-font-family: 'Inter', sans-serif;
-margin: 0;
-overflow-x: hidden;
-}
-
-.luxury-serif { font-family: 'Playfair Display', serif; }
-
-/* --- BACKGROUND SLIDESHOW --- */
 .slideshow {
-position: fixed;
-top: 0; left: 0; width: 100%; height: 100%;
-z-index: -2; list-style: none; margin: 0; padding: 0;
+    background-image: url('IMG_4165.jpeg');
+    /* other styles */
 }
 
-.slideshow li {
-position: absolute; width: 100%; height: 100%;
-background-size: cover; background-position: center;
-opacity: 0; animation: imageAnimation 36s linear infinite;
+.slideshow {
+    background-image: url('IMG_4166.jpeg');
+    /* other styles */
 }
 
-.slideshow li:nth-child(1) { background-image: url('IMG_4165.jpg'); }
-.slideshow li:nth-child(2) { background-image: url('IMG_4166.jpg'); animation-delay: 6s; }
-.slideshow li:nth-child(3) { background-image: url('IMG_4230.jpg'); animation-delay: 12s; }
-.slideshow li:nth-child(4) { background-image: url('IMG_4231.jpg'); animation-delay: 18s; }
-.slideshow li:nth-child(5) { background-image: url('IMG_4232.jpg'); animation-delay: 24s; }
-.slideshow li:nth-child(6) { background-image: url('IMG_4233.jpg'); animation-delay: 30s; }
-
-@keyframes imageAnimation {
-0% { opacity: 0; } 5% { opacity: 1; } 16% { opacity: 1; } 21% { opacity: 0; } 100% { opacity: 0; }
+.slideshow {
+    background-image: url('IMG_4230.JPG');
+    /* other styles */
 }
 
-.overlay {
-position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-z-index: -1; background: radial-gradient(circle, transparent 0%, var(--black-overlay) 100%);
-backdrop-filter: blur(3px);
+.slideshow {
+    background-image: url('IMG_4231.JPG');
+    /* other styles */
 }
 
-.glass-panel {
-background: rgba(255, 255, 255, 0.02);
-backdrop-filter: blur(40px);
-border: 1px solid rgba(255, 255, 255, 0.05);
+.slideshow {
+    background-image: url('IMG_4232.JPG');
+    /* other styles */
 }
 
-.gold-text {
-background: var(--gold);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+.slideshow {
+    background-image: url('IMG_4233.JPG');
+    /* other styles */
 }
-
-.btn-glam {
-background: linear-gradient(90deg, #FF1493, #C71585);
-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.btn-glam:hover {
-letter-spacing: 0.2em;
-box-shadow: 0 0 50px rgba(255, 20, 147, 0.6);
-transform: translateY(-2px);
-}
-
-#loader {
-display: none;
-border: 3px solid rgba(255, 20, 147, 0.1);
-border-top: 3px solid var(--pink);
-border-radius: 50%;
-width: 40px; height: 40px;
-animation: spin 1s linear infinite;
-margin: 20px auto;
-}
-
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-</style>
-</head>
-<body class="min-h-screen py-20 px-6">
-
-<ul class="slideshow">
-<li></li><li></li><li></li><li></li><li></li><li></li>
-</ul>
-<div class="overlay"></div>
-
-<div class="max-w-3xl mx-auto relative">
-
-<header class="text-center mb-16">
-<h1 class="text-5xl md:text-8xl luxury-serif gold-text font-bold">Application <span>Received</span></h1>
-<p class="text-gray-400 text-xs tracking-[0.5em] uppercase mt-6">Official Portal</p>
-</header>
-
-<div class="grid md:grid-cols-2 gap-6 mb-6">
-<div class="glass-panel p-10 rounded-xl">
-<h3 class="text-[10px] tracking-[0.5em] font-bold text-pink-500 uppercase mb-6">Key Expectations</h3>
-<ul class="space-y-4 text-[11px] text-gray-300 leading-relaxed">
-<li>• Ability to promote and represent the brand</li>
-<li>• Willing to commit time weekly</li>
-<li>• Must be reliable and consistent</li>
-</ul>
-</div>
-
-<div class="glass-panel p-10 rounded-xl">
-<h3 class="text-[10px] tracking-[0.5em] font-bold text-pink-500 uppercase mb-6">📜 Terms & Conditions</h3>
-<ul class="space-y-3 text-[10px] text-gray-400 leading-relaxed">
-<li>• Represent the brand professionally at all times</li>
-<li>• Expected to actively promote our services</li>
-<li>• Must meet assigned targets and deadlines</li>
-<li>• Misconduct result in removal from program</li>
-<li>• Maintain regular communication with team</li>
-</ul>
-</div>
-</div>
-
-<div class="glass-panel p-10 md:p-24 rounded-3xl">
-<div id="formWrapper">
-<div class="text-center mb-16">
-<h2 class="luxury-serif text-4xl gold-text italic mb-3">Confirm Your Application</h2>
-<p class="text-gray-500 text-[11px]">Please fill in your details and confirm your agreement to proceed.</p>
-</div>
-
-<form id="ambassadorForm" class="space-y-12">
-<div class="grid md:grid-cols-2 gap-12">
-<input type="text" id="full_name" placeholder="Full Name" required class="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-pink-500 outline-none transition-all placeholder-gray-800">
-<input type="text" id="insta_handle" placeholder="Instagram Handle" required class="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-pink-500 outline-none transition-all placeholder-gray-800">
-</div>
-
-<div class="text-center">
-<p class="text-pink-500 text-[10px] uppercase tracking-[0.2em] mb-8 font-semibold">
-⏰ Deadline: Submit within 24 hours of receiving this link. Late submissions will not be considered.
-</p>
-
-<label class="flex items-center justify-center cursor-pointer group mb-10">
-<input type="checkbox" required class="w-4 h-4 accent-pink-600">
-<span class="ml-4 text-[10px] text-gray-500 group-hover:text-gray-300 transition uppercase tracking-widest">I Agree to the Above Terms</span>
-</label>
-
-<div id="loader"></div>
-<button type="submit" id="submitBtn" class="btn-glam w-full py-6 rounded text-white font-bold uppercase tracking-[0.3em] text-xs">
-Secure Your Spot
-</button>
-</div>
-</form>
-</div>
-
-<div id="successPanel" class="hidden text-center py-12">
-<h3 class="luxury-serif text-5xl gold-text mb-6">✅ SUCCESS</h3>
-<p class="text-white text-lg mb-4">Your application has been successfully confirmed.</p>
-<p class="text-gray-400 text-sm italic">Our team will review your response and contact shortlisted candidates.</p>
-</div>
-</div>
-
-<footer class="mt-20 text-center">
-<p class="text-gray-800 text-[9px] tracking-[1em] uppercase">Private Ambassador Access • 2026</p>
-</footer>
-</div>
-
-<script>
-document.getElementById('ambassadorForm').addEventListener('submit', function(e) {
-e.preventDefault();
-const btn = document.getElementById('submitBtn');
-const loader = document.getElementById('loader');
-
-btn.style.display = 'none';
-loader.style.display = 'block';
-
-emailjs.send("service_sp1bcxu", "template_ambassador", {
-name: document.getElementById('full_name').value,
-insta_handle: document.getElementById('insta_handle').value
-})
-.then(function() {
-document.getElementById('formWrapper').style.display = 'none';
-document.getElementById('successPanel').classList.remove('hidden');
-window.scrollTo({ top: 0, behavior: 'smooth' });
-}, function(error) {
-alert("Submission failed. Please check your connection.");
-btn.style.display = 'block';
-loader.style.display = 'none';
-});
-});
-</script>
-</body>
-</html>
